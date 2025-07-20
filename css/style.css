@@ -1,0 +1,325 @@
+/* ======================== GLOBAL RESET ======================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ======================== BASE ======================== */
+html {
+    font-size: 62.5%;
+}
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #191919;
+    color: #000;
+}
+
+/* ======================== HEADER ======================== */
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+}
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active {
+    color: #004e7a;
+    border-bottom: 3px solid #004e7a;
+}
+
+/* ======================== SECTION ======================== */
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+/* ======================== HOME / DASHBOARD ======================== */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-image: url('../image/kantor.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.home-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-content p {
+    text-align: center;
+    font-size: 1.6rem;
+}
+/* khusus deskripsi index.html */
+.intro-index {
+    text-align: justify !important;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 25px #000;
+    transition: 0.2s linear;
+}
+.home-img img:hover {
+    transform: scale(1.05);
+}
+.typing-text {
+    font-size: 3.4rem;
+    font-weight: 600;
+    position: relative;
+}
+.cursor {
+    position: absolute;
+    top: 0;
+    font-weight: 1000;
+    animation: blink 0.7s step-end infinite;
+    left: 0;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+span {
+    color: #004e7a;
+}
+
+/* ======================== SERVICES / SKILLS ======================== */
+.homeservice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 9%;
+    background-image: url('../image/kantor.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.homeservice .title {
+    font-size: 6rem;
+    color: #000;
+    text-align: center;
+    margin: 5rem 0 1rem;
+}
+.homeservice .home-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    margin: 2rem 0;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.homeservice .home-content h2 {
+    color: #004e7a;
+    margin-bottom: 1rem;
+}
+.homeservice .service-icon {
+    font-size: 3rem;
+    color: #004e7a;
+    margin-bottom: 1rem;
+}
+
+/* ======================== CONTACT ======================== */
+.contact {
+    background-color: #161616;
+    background-image: url('../image/kantor.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 9%;
+    min-height: 100vh;
+}
+.contact .title {
+    text-align: center;
+    font-size: 5rem;
+    color: #000;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-container {
+    background-color: rgba(0, 78, 122, 0.8);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+.form-group label {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #004e7a;
+    border-radius: 0.5rem;
+}
+.contact-btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 600;
+    border: 2px solid #fff;
+    transition: 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 2rem;
+}
+.contact-btn:hover {
+    transform: scale(1.05);
+}
+
+/* --- Sosial Media Index dan Contact (Ukuran Konsisten) --- */
+.social-icons a, .sosial-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;           /* Diperbesar agar tidak kecil di mobile */
+    height: 5rem;
+    background-color: transparent;
+    border: 0.2rem solid #004e7a;
+    font-size: 2.4rem;     /* Lebih proporsional */
+    border-radius: 50%;
+    margin: 2rem 1rem;
+    transition: 0.3s ease;
+    color: #004e7a;
+}
+.social-icons-contact a, .sosial-icons-contact a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;           /* Diperbesar agar tidak kecil di mobile */
+    height: 5rem;
+    background-color: transparent;
+    border: 0.2rem solid #ffffff ;
+    font-size: 2.4rem;     /* Lebih proporsional */
+    border-radius: 50%;
+    margin: 2rem 1rem;
+    transition: 0.3s ease;
+    color: #ffffff;
+}
+
+.social-icons a:hover, .sosial-icons a:hover {
+    color: #191919;
+    transform: scale(1.2) translateY(-5px);
+    background-color: #004e7a;
+    box-shadow: 0 0 25px #004e7a;
+}
+
+/* --- Form Contact Lebih Besar, Rapi --- */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1.5rem;             /* Diperbesar dari sebelumnya */
+    font-size: 1.8rem;           /* Lebih nyaman diisi */
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #004e7a;
+    border-radius: 0.7rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #004e7a;
+    box-shadow: 0 0 5px rgba(0, 78, 122, 0.7);
+}
+
+
+
+
+/* ======================== BUTTON ======================== */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: transparent;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #004e7a;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #004e7a;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+.btn:hover {
+    transform: scale(1.03);
+    background-color: #004e7a;
+    color: #191919;
+    box-shadow: 0 0 25px #004e7a;
+}
