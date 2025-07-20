@@ -1,0 +1,271 @@
+/* ======================== MOBILE ONLY ======================== */
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: 55%; /* Umumnya 55% - 62.5% adalah rentang yang baik */
+}
+
+@media (max-width: 480px) { /* Untuk ponsel yang lebih kecil */
+    html {
+        font-size: 45%; /* Bisa lebih kecil lagi untuk layar yang sangat kecil */
+    }
+}
+
+/* ======================== HOME FULL BACKGROUND ======================== */
+.home {
+    width: 100vw;
+    min-height: 100vh;
+    background: url('../image/kantor.png') center/cover no-repeat;
+    padding: 3rem 2rem; /* Kurangi padding vertikal */
+    flex-direction: column; /* Pastikan ini ada agar konten menumpuk */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Kurangi jarak antar elemen */
+}
+
+/* ======================== PROFILE IMAGE FULLY ROUND ======================== */
+.home-img img {
+    width: 180px; /* Sedikit perkecil gambar profil */
+    height: 180px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* Sesuaikan ukuran teks di .home-content */
+.home-content h1 {
+    font-size: 4rem; /* Sesuaikan ukuran untuk "Hi, I'm Pandu Ys" */
+    text-align: center; /* Perataan teks di tengah */
+}
+
+.home-content h3 {
+    font-size: 3rem; /* Sesuaikan ukuran untuk typing-text */
+    text-align: center;
+}
+
+.home-content p.intro-index {
+    font-size: 1.5rem; /* Sesuaikan ukuran paragraf */
+    text-align: justify; /* Tetap justify */
+    padding: 0 1rem; /* Tambahkan sedikit padding horizontal pada teks */
+}
+
+/* Untuk menata social-icons dan tombol Hire me */
+.social-icons {
+    margin-top: 2rem;
+    display: flex; /* Jadikan flex container */
+    justify-content: center; /* Pusatkan ikon */
+    gap: 1.5rem; /* Jarak antar ikon */
+}
+
+.social-icons a {
+    width: 3.5rem; /* Perkecil ukuran ikon */
+    height: 3.5rem;
+    font-size: 1.8rem; /* Perkecil font ikon */
+    margin: 0; /* Hapus margin yang tumpang tindih dari style.css */
+}
+
+.btn {
+    padding: 0.8rem 2rem; /* Sesuaikan padding tombol */
+    font-size: 1.5rem; /* Sesuaikan ukuran font tombol */
+    margin-top: 2rem; /* Beri jarak dari ikon */
+}
+
+/* ======================== MOBILE NAVBAR ======================== */
+.menu-toggle {
+    display: block; /* Pastikan selalu tampil di mobile */
+    font-size: 2.8rem; /* Sedikit perbesar agar mudah di-tap */
+    color: #004e7a;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 70%; /* Mungkin 60% terlalu sempit, coba 70% atau 80% */
+    max-width: 300px; /* Batasi lebar maksimal agar tidak terlalu lebar di tablet */
+    padding: 1.5rem; /* Kurangi padding internal */
+    background: rgba(0, 78, 122, 0.95);
+    border-left: 3px solid #004e7a;
+    border-bottom: 3px solid #004e7a;
+    border-bottom-left-radius: 1.5rem;
+    display: none; /* Defaultnya tersembunyi */
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 99; /* Pastikan di atas konten lain */
+}
+
+nav.active {
+    display: flex; /* Tampilkan saat aktif */
+}
+
+nav a {
+    display: block;
+    font-size: 1.8rem; /* Sedikit perkecil ukuran font link */
+    margin: 1rem 0; /* Kurangi margin vertikal antar link */
+    color: white;
+    width: 100%;
+    padding: 0.8rem; /* Tambahkan padding agar area tap lebih besar */
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #004e7a;
+    padding: 0.8rem; /* Sesuaikan padding agar konsisten */
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+/* ======================== General Section Padding ======================== */
+/* Ini akan menimpa padding section default dari style.css untuk layar kecil */
+section {
+    padding: 4rem 4% 4rem; /* Kurangi padding di tablet */
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 3rem 3% 3rem; /* Lebih kecil lagi untuk ponsel */
+    }
+}
+
+/* ======================== Section homeservice (Skills & Services) ======================== */
+.homeservice {
+    padding: 5rem 4%; /* Kurangi padding horizontal keseluruhan section */
+    min-height: 100vh;
+}
+
+.homeservice .title {
+    font-size: 4rem; /* Perkecil judul di tablet */
+}
+
+.homeservice .home-content {
+    padding: 1.5rem; /* Kurangi padding di dalam kotak konten */
+    width: 95%; /* Buat lebih lebar di mobile */
+    max-width: 500px; /* Batasi maksimal */
+}
+
+.homeservice .home-content h2 {
+    font-size: 2.2rem; /* Perkecil judul dalam kotak konten */
+}
+
+.homeservice .home-content p {
+    font-size: 1.5rem; /* Perkecil font paragraf dalam kotak konten */
+}
+
+/* ======================== Section Contact ======================== */
+.contact .title {
+    font-size: 4rem;
+    margin-bottom: 2.5rem; /* Sedikit kurangi margin */
+}
+
+.contact-container {
+    padding: 2.5rem; /* Kurangi padding internal container */
+    width: 95%; /* Buat lebih lebar di mobile */
+    max-width: 550px; /* Batasi maksimal */
+}
+
+.form-group input,
+.form-group textarea {
+    font-size: 1.5rem; /* Sedikit perkecil font input/textarea */
+    padding: 1rem; /* Kurangi padding input/textarea */
+}
+
+.contact-btn {
+    padding: 1rem 2.5rem; /* Sesuaikan padding tombol kirim */
+    font-size: 1.6rem; /* Sesuaikan font tombol */
+}
+
+.sosial-icons-contact a {
+    width: 3.8rem; /* Perkecil sedikit ikon sosmed */
+    height: 3.8rem;
+    font-size: 1.8rem;
+    margin: 2rem 1rem 2rem 0; /* Sesuaikan margin antar ikon */
+}
+
+/* ======================== Media Queries Tambahan untuk Layar Sangat Kecil (<= 480px) ======================== */
+@media (max-width: 480px) {
+    /* Home Section */
+    .home {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+    .home-img img {
+        width: 150px;
+        height: 150px;
+    }
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+    .home-content p.intro-index {
+        font-size: 1.4rem;
+        padding: 0;
+    }
+    .social-icons {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.6rem;
+    }
+    .btn {
+        padding: 0.7rem 1.8rem;
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Navbar Mobile */
+    nav {
+        width: 80%; /* Bisa lebih lebar di ponsel kecil */
+        padding: 1rem;
+    }
+    nav a {
+        font-size: 1.6rem;
+        margin: 0.8rem 0;
+        padding: 0.6rem;
+    }
+
+    /* Section homeservice (Skills & Services) */
+    .homeservice .title {
+        font-size: 3.5rem;
+    }
+    .homeservice .home-content {
+        padding: 1rem;
+        width: 100%;
+    }
+    .homeservice .home-content h2 {
+        font-size: 2rem;
+    }
+    .homeservice .home-content p {
+        font-size: 1.4rem;
+    }
+
+    /* Section Contact */
+    .contact .title {
+        font-size: 3.5rem;
+    }
+    .contact-container {
+        padding: 1.5rem;
+        width: 100%;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 1.4rem;
+        padding: 0.8rem;
+    }
+    .contact-btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.5rem;
+    }
+    .sosial-icons-contact a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.7rem;
+        margin: 1.5rem 0.8rem 1.5rem 0;
+    }
+}
