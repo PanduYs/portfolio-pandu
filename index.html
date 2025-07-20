@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========= METADATA & LINK ========= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio Website Pandu Ys</title>
+
+    <!-- ICONS / FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- CSS KHUSUS MOBILE -->
+    <link rel="stylesheet" href="css/mobile.css" media="only screen and (max-width: 768px)">
+</head>
+
+<body>
+    <!-- ========= HEADER & NAVIGATION ========= -->
+    <header>
+        <!-- TOGGLE UNTUK MOBILE -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+
+        <!-- MENU NAVIGASI -->
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ========= SECTION BERANDA / HOME ========= -->
+    <section class="home">
+        <!-- GAMBAR PROFIL -->
+        <div class="home-img">
+            <img src="image/FOTO FORMAL2.png" alt="Profile Picture"/>
+        </div>
+
+        <!-- TEKS KONTEN BERANDA -->
+        <div class="home-content">
+            <h1>Hi, I'm <span>Pandu Ys</span></h1>
+            <h3 class="typing-text"><span></span><span class="cursor">|</span></h3>
+            <p class="intro-index">
+                Saya Pandu, saya adalah seorang mahasiswa jurusan Teknik Informatika dari Universitas Widyatama Bandung, saya memiliki minat besar dalam dunia pengembangan website dan desain antarmuka pengguna. Selain membuat Website yang menarik dan responsif, saya juga memahami dasar-dasar dalam bidang IT hingga pemrograman. Saya senang terus belajar dan mengembangkan keterampilan untuk memberikan solusi digital yang efektif dan kreatif
+            </p>
+
+            <!-- ICON SOSIAL MEDIA -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/pandu-ys-83b2a5374/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/PanduYs" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/6287824410333" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+            <!-- TOMBOL CONTACT -->
+            <a href="contact.html" class="btn">Hire me</a>
+        </div>
+    </section>
+
+
+    <!-- ========= JAVASCRIPT KETIK-KETIK TEKS ========= -->
+    <script>
+      const typingText = document.querySelector(".typing-text span");
+      const cursor = document.querySelector(".cursor");
+      const words = ["Web Developer", "Web Designer"];
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeEffect() {
+        const currentWord = words[wordIndex];
+        const displayedText = isDeleting
+          ? currentWord.substring(0, charIndex--)
+          : currentWord.substring(0, charIndex++);
+
+        typingText.textContent = displayedText;
+        cursor.style.left = `${typingText.offsetWidth}px`; // posisi cursor berkedip
+
+        if (!isDeleting && charIndex === currentWord.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 2000);
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(typeEffect, 500);
+        } else {
+          setTimeout(typeEffect, isDeleting ? 100 : 200);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+
+    <!-- ========= JAVASCRIPT UNTUK HIGHLIGHT MENU AKTIF ========= -->
+    <script>
+      const navLinks = document.querySelectorAll('nav a');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    </script>
+
+    <!-- ========= JAVASCRIPT TOGGLE MENU MOBILE ========= -->
+    <script>
+        const mobileMenu = document.getElementById("mobile-menu");
+        const nav = document.querySelector("nav");
+
+        mobileMenu.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>

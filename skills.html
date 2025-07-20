@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========= META DATA & LINK ========= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Portfolio Website Pandu Ys</title>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css" media="only screen and (max-width: 768px)">
+</head>
+
+<body>
+
+    <!-- ========= HEADER / NAVBAR ========= -->
+    <header>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ========= SECTION SKILLS ========= -->
+    <section class="homeservice">
+        <h1 class="title">Skills</h1>
+
+        <div class="home-content">
+            <h2>HTML</h2>
+            <p>Memahami struktur HTML untuk membuat halaman website yang rapi dan terstruktu</p>
+        </div>
+
+        <div class="home-content">
+            <h2>CSS</h2>
+            <p>Mengatur desain tampilan website dengan CSS, mulai dari warna, ukuran, hingga tata letak</p>
+        </div>
+
+        <div class="home-content">
+            <h2>JavaScript</h2>
+            <p>Menguasai JavaScript untuk membuat website lebih interaktif dan dinamis</p>
+        </div>
+
+        <div class="home-content">
+            <h2>PHP</h2>
+            <p>Memahami PHP untuk membuat website lebih fungsional seperti formulir kontak dan sistem login</p>
+        </div>
+    </section>
+
+    <!-- ========= TOGGLE NAVBAR MOBILE ========= -->
+    <script>
+        const mobileMenu = document.getElementById("mobile-menu");
+        const nav = document.querySelector("nav");
+
+        mobileMenu.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
